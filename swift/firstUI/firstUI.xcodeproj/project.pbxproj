@@ -14,7 +14,8 @@
 		15C76425198B3E5C00291765 /* firstUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C76424198B3E5C00291765 /* firstUITests.swift */; };
 		15C76435198B460400291765 /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C76434198B460400291765 /* myCell.swift */; };
 		15C76437198B4FDD00291765 /* myCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15C76436198B4FDD00291765 /* myCell.xib */; };
-		15EA4BD5198CD4710002C81E /* 98614.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 15EA4BD4198CD4710002C81E /* 98614.jpg */; };
+		18E6A0B017AD48E200AA557D /* LCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A0AF17AD48E200AA557D /* LCView.m */; };
+		18E6A0B217AD492900AA557D /* mySwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6A0B117AD492900AA557D /* mySwiftView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,10 @@
 		15C76424198B3E5C00291765 /* firstUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstUITests.swift; sourceTree = "<group>"; };
 		15C76434198B460400291765 /* myCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myCell.swift; path = ../myCell.swift; sourceTree = "<group>"; };
 		15C76436198B4FDD00291765 /* myCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = myCell.xib; path = ../myCell.xib; sourceTree = "<group>"; };
-		15EA4BD4198CD4710002C81E /* 98614.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 98614.jpg; sourceTree = "<group>"; };
+		18E6A0AD17AD48E200AA557D /* firstUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "firstUI-Bridging-Header.h"; sourceTree = "<group>"; };
+		18E6A0AE17AD48E200AA557D /* LCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCView.h; sourceTree = "<group>"; };
+		18E6A0AF17AD48E200AA557D /* LCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCView.m; sourceTree = "<group>"; };
+		18E6A0B117AD492900AA557D /* mySwiftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mySwiftView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +67,13 @@
 		15C76403198B3E5C00291765 = {
 			isa = PBXGroup;
 			children = (
+				18E6A0B117AD492900AA557D /* mySwiftView.swift */,
+				18E6A0AE17AD48E200AA557D /* LCView.h */,
+				18E6A0AF17AD48E200AA557D /* LCView.m */,
 				15C7640E198B3E5C00291765 /* firstUI */,
 				15C76421198B3E5C00291765 /* firstUITests */,
 				15C7640D198B3E5C00291765 /* Products */,
+				18E6A0AD17AD48E200AA557D /* firstUI-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,7 +89,6 @@
 		15C7640E198B3E5C00291765 /* firstUI */ = {
 			isa = PBXGroup;
 			children = (
-				15EA4BD4198CD4710002C81E /* 98614.jpg */,
 				15C76411198B3E5C00291765 /* AppDelegate.swift */,
 				15C76413198B3E5C00291765 /* ViewController.swift */,
 				15C76415198B3E5C00291765 /* Main.storyboard */,
@@ -198,7 +205,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15EA4BD5198CD4710002C81E /* 98614.jpg in Resources */,
 				15C76417198B3E5C00291765 /* Main.storyboard in Resources */,
 				15C76437198B4FDD00291765 /* myCell.xib in Resources */,
 				15C76419198B3E5C00291765 /* Images.xcassets in Resources */,
@@ -220,6 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C76414198B3E5C00291765 /* ViewController.swift in Sources */,
+				18E6A0B017AD48E200AA557D /* LCView.m in Sources */,
+				18E6A0B217AD492900AA557D /* mySwiftView.swift in Sources */,
 				15C76435198B460400291765 /* myCell.swift in Sources */,
 				15C76412198B3E5C00291765 /* AppDelegate.swift in Sources */,
 			);
@@ -339,9 +347,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = firstUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "firstUI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +361,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = firstUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "firstUI-Bridging-Header.h";
 			};
 			name = Release;
 		};

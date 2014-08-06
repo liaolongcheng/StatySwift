@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>UITest.xcscheme</key>
+		<key>Dictionary.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9835748F195FC9330046D512</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>983574A5195FC9330046D512</key>
+		<key>982A674F19433CDC0023FC19</key>
 		<dict>
 			<key>primary</key>
 			<true/>

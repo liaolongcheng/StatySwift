@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9835748F195FC9330046D512"
-               BuildableName = "UITest.app"
-               BlueprintName = "UITest"
-               ReferencedContainer = "container:UITest.xcodeproj">
+               BlueprintIdentifier = "982A6729194329360023FC19"
+               BuildableName = "Array"
+               BlueprintName = "Array"
+               ReferencedContainer = "container:Array.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "983574A5195FC9330046D512"
-               BuildableName = "UITestTests.xctest"
-               BlueprintName = "UITestTests"
-               ReferencedContainer = "container:UITest.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9835748F195FC9330046D512"
-            BuildableName = "UITest.app"
-            BlueprintName = "UITest"
-            ReferencedContainer = "container:UITest.xcodeproj">
+            BlueprintIdentifier = "982A6729194329360023FC19"
+            BuildableName = "Array"
+            BlueprintName = "Array"
+            ReferencedContainer = "container:Array.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9835748F195FC9330046D512"
-            BuildableName = "UITest.app"
-            BlueprintName = "UITest"
-            ReferencedContainer = "container:UITest.xcodeproj">
+            BlueprintIdentifier = "982A6729194329360023FC19"
+            BuildableName = "Array"
+            BlueprintName = "Array"
+            ReferencedContainer = "container:Array.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9835748F195FC9330046D512"
-            BuildableName = "UITest.app"
-            BlueprintName = "UITest"
-            ReferencedContainer = "container:UITest.xcodeproj">
+            BlueprintIdentifier = "982A6729194329360023FC19"
+            BuildableName = "Array"
+            BlueprintName = "Array"
+            ReferencedContainer = "container:Array.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

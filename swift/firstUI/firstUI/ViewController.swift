@@ -9,9 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    
-    var myImageView:UIImageView?
-    
+                            
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,28 +19,17 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         myTableView.dataSource = self
         self.view.addSubview(myTableView)
         
-        var myView = UIView(frame: CGRectMake(0, 0, 100, 100))
-        myView.backgroundColor = UIColor.redColor()
-        self.view .addSubview(myView)
+//        var myView = UIView(frame: CGRectMake(0, 0, 100, 100))
+//        myView.backgroundColor = UIColor.redColor()
+//        self.view .addSubview(myView)
         
-        var myButton:UIButton = UIButton(frame: CGRect(x: 200, y: 200, width: 100, height: 30))
-        myButton.backgroundColor = UIColor.grayColor()
-        myButton.setTitle("myButton", forState: UIControlState.Normal)
-        myButton.addTarget(self, action:"myButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(myButton)
+
         
-        myImageView = UIImageView(frame: CGRectMake(100, 300, 100, 100))
-        myImageView!.image = UIImage(named: "98614.jpg")
-        myImageView!.backgroundColor = UIColor.redColor()
-        self.view.addSubview(myImageView)
+        var swiftView:mySwiftView = mySwiftView(frame:CGRectMake(100, 100, 100, 100))
+        swiftView.backgroundColor = UIColor.grayColor()
+        self.view.addSubview(swiftView)
         
-    }
-    
-    
-    func myButtonClick(btn:UIButton)
-    {
-        println(btn)
-        println("我点击了按钮")
+        
     }
 
     override func didReceiveMemoryWarning() {
