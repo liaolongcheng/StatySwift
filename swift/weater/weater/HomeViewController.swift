@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate{
     
@@ -103,6 +104,11 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         
     }
 
+    @IBAction func deleteButtonClick(sender: AnyObject) {
+        
+        self.weaterTableView.setEditing(!self.weaterTableView.editing, animated: true)
+        
+    }
 
     //更新时间
     func refreshTtile()
@@ -138,11 +144,42 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: str)
             cell!.backgroundColor = UIColor.whiteColor()
+            cell!.textLabel.textAlignment = NSTextAlignment.Center
         }
-        cell!.textLabel.text = "adfasd"
-        
+        cell!.textLabel.text = _sourceArray[indexPath.row].allValues?[0] as NSString
+        cell!.textLabel.textColor = ColorHelper.getSomeColor()
         return cell
     }
-   
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
+    {
+        var weater = WeatherViewController(cityId: _sourceArray[indexPath.row].allKeys?[0] as NSString)
+        self.navigationController.pushViewController(weater, animated: true)
+    }
 
+    @IBAction func helpeButtonClick(sender: AnyObject) {
+        
+        var helpView:UIView? = NSBundle.mainBundle().loadNibNamed("HelpView", owner: nil, options: nil)[0] as? UIView
+        helpView!.frame = CGRectMake(14, 114, 293, 224)
+        self.view .addSubview(helpView!)
+        
+        var trans:CATransition = CATransition()
+        trans.type = "rippleEffect"
+        trans.removedOnCompletion = true
+        trans.duration = 1.0
+        self.view.layer.addAnimation(trans, forKey: "animation")
+        
+    }
+    
+    func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!)
+    {
+        if editingStyle == UITableViewCellEditingStyle.Delete
+        {
+            _sourceArray.removeObjectAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Left)
+            
+        }
+    }
 }
+
+
+

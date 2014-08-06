@@ -18,11 +18,20 @@ class WeatherViewController: UIViewController,UITableViewDataSource,UITableViewD
         super.init(nibName: "WeatherViewController", bundle: nil)
         _cityId = cityId
     }
+    init(cityInfo:NSDictionary)
+    {
+        super.init(nibName: "WeatherViewController", bundle: nil)
+        _cityId = cityInfo.allKeys[0] as? NSString
+        var home:HomeViewController = HomeViewController.shearedHomeViewController()
+        home._sourceArray.addObject(cityInfo)
+        home.weaterTableView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        downDataSource()
         
+        downDataSource()
     }
+    
     
     func downDataSource()
     {
@@ -44,7 +53,7 @@ class WeatherViewController: UIViewController,UITableViewDataSource,UITableViewD
     
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int
     {
-        return 1
+        return 2
     }
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
     {
@@ -72,11 +81,11 @@ class WeatherViewController: UIViewController,UITableViewDataSource,UITableViewD
             var time:String = formatter.stringFromDate(NSDate(timeInterval:Double(indexPath.row*24*60*60), sinceDate:formatter.dateFromString(String(_weaterDic!.objectForKey("date_y") as NSString))))
             cell!.timeLable.text = time
             cell!.timeLable.textColor = ColorHelper.getSomeColor()
-            cell!.wenduLable.text = _weaterDic!["temp\(indexPath.row + 1)"] as String
+            cell!.wenduLable.text = _weaterDic!["temp\(indexPath.row + 1)"] as? String
             cell!.wenduLable.textColor = ColorHelper.getSomeColor()
-            cell!.fengliLable.text = _weaterDic!["wind\(indexPath.row + 1)"] as String
+            cell!.fengliLable.text = _weaterDic!["wind\(indexPath.row + 1)"] as? String
             cell!.fengliLable.textColor = ColorHelper.getSomeColor()
-            cell!.tianqiLable.text = _weaterDic!["weather\(indexPath.row + 1)"] as String
+            cell!.tianqiLable.text = _weaterDic!["weather\(indexPath.row + 1)"] as? String
             cell!.tianqiLable.textColor = ColorHelper.getSomeColor()
             cell!.firstImageView.image = UIImage(named: NSString(format:"d%@.png",_weaterDic!["img\(indexPath.row * 2 + 1)"] as String))
             cell!.secandImageView.image = UIImage(named: NSString(format:"n%@.png",_weaterDic!["img\(indexPath.row * 2 + 2)"] as String))
@@ -85,7 +94,15 @@ class WeatherViewController: UIViewController,UITableViewDataSource,UITableViewD
         }
         else if indexPath.section == 1
         {
-            
+            var cell:ZhiShuCellTableViewCell? = tableView.dequeueReusableCellWithIdentifier(str2) as? ZhiShuCellTableViewCell
+            if cell == nil
+            {
+                cell = NSBundle.mainBundle().loadNibNamed("ZhiShuCellTableViewCell", owner: nil, options: nil)[0] as? ZhiShuCellTableViewCell
+            }
+            cell!.photoImageView.image = UIImage(named: "d25.png")
+            cell!.titleLable.text = "adfadfa"
+            cell!.titleLable.textColor = ColorHelper.getSomeColor()
+            return cell
         }
         return nil
     }
@@ -95,6 +112,20 @@ class WeatherViewController: UIViewController,UITableViewDataSource,UITableViewD
         {
             return 85
         }
+        else if indexPath.section == 1
+        {
+            return 60
+        }
         return 0
     }
+    func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String!
+    {
+        if section == 1
+        {
+            return _weaterDic!["index_d"] as String
+        }
+        return nil
+    }
+    
+    
 }

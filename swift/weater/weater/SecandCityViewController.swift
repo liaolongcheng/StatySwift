@@ -74,8 +74,8 @@ class SecandCityViewController: UIViewController,UITableViewDataSource,UITableVi
     }
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
-        var cityId:NSString = _sourceDic.allKeys[indexPath.row] as NSString
-        var weaterViewController = WeatherViewController(cityId: cityId)
+        var cityId:NSDictionary = [_sourceDic.allKeys[indexPath.row] as NSString:_sourceDic.allValues[indexPath.row] as NSString]
+        var weaterViewController = WeatherViewController(cityInfo:cityId)
         self.navigationController.pushViewController(weaterViewController, animated: true)
     }
     
