@@ -9,9 +9,39 @@
 /* Begin PBXBuildFile section */
 		18133A1B19920343008630E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18133A1A19920343008630E5 /* AppDelegate.swift */; };
 		18133A1D19920343008630E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18133A1C19920343008630E5 /* ViewController.swift */; };
-		18133A2019920343008630E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18133A1E19920343008630E5 /* Main.storyboard */; };
 		18133A2219920343008630E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18133A2119920343008630E5 /* Images.xcassets */; };
 		18133A2E19920343008630E5 /* weaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18133A2D19920343008630E5 /* weaterTests.swift */; };
+		18133A4719920408008630E5 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18133A3719920408008630E5 /* ColorHelper.swift */; };
+		18133A4819920408008630E5 /* FirstCityCelllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18133A3819920408008630E5 /* FirstCityCelllTableViewCell.swift */; };
+		18133A4919920408008630E5 /* FirstCityCelllTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18133A3919920408008630E5 /* FirstCityCelllTableViewCell.xib */; };
+		18133A4A19920408008630E5 /* FirstCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18133A3A19920408008630E5 /* FirstCityViewController.swift */; };
+		18133A4B19920408008630E5 /* FirstCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18133A3B19920408008630E5 /* FirstCityViewController.xib */; };
+		18133A4C19920408008630E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18133A3C19920408008630E5 /* HomeViewController.swift */; };
+		18133A4D19920408008630E5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18133A3D19920408008630E5 /* HomeViewController.xib */; };
+		18133A4E19920408008630E5 /* SaveWeaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18133A3F19920408008630E5 /* SaveWeaterCell.swift */; };
+		18133A4F19920408008630E5 /* SaveWeaterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18133A4019920408008630E5 /* SaveWeaterCell.xib */; };
+		18133A5019920408008630E5 /* SecandCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18133A4119920408008630E5 /* SecandCityViewController.swift */; };
+		18133A5119920408008630E5 /* SecandCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18133A4219920408008630E5 /* SecandCityViewController.xib */; };
+		18133A5219920408008630E5 /* WeaterCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18133A4319920408008630E5 /* WeaterCellTableViewCell.swift */; };
+		18133A5319920408008630E5 /* WeaterCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18133A4419920408008630E5 /* WeaterCellTableViewCell.xib */; };
+		18133A5419920408008630E5 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18133A4519920408008630E5 /* WeatherViewController.swift */; };
+		18133A5519920408008630E5 /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18133A4619920408008630E5 /* WeatherViewController.xib */; };
+		18133A7B19920419008630E5 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A5919920419008630E5 /* AFHTTPRequestOperation.m */; };
+		18133A7C19920419008630E5 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A5B19920419008630E5 /* AFHTTPRequestOperationManager.m */; };
+		18133A7D19920419008630E5 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A5D19920419008630E5 /* AFHTTPSessionManager.m */; };
+		18133A7E19920419008630E5 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A6019920419008630E5 /* AFNetworkReachabilityManager.m */; };
+		18133A7F19920419008630E5 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A6219920419008630E5 /* AFSecurityPolicy.m */; };
+		18133A8019920419008630E5 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A6419920419008630E5 /* AFURLConnectionOperation.m */; };
+		18133A8119920419008630E5 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A6619920419008630E5 /* AFURLRequestSerialization.m */; };
+		18133A8219920419008630E5 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A6819920419008630E5 /* AFURLResponseSerialization.m */; };
+		18133A8319920419008630E5 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A6A19920419008630E5 /* AFURLSessionManager.m */; };
+		18133A8419920419008630E5 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A6D19920419008630E5 /* AFNetworkActivityIndicatorManager.m */; };
+		18133A8519920419008630E5 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A6F19920419008630E5 /* UIActivityIndicatorView+AFNetworking.m */; };
+		18133A8619920419008630E5 /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A7119920419008630E5 /* UIAlertView+AFNetworking.m */; };
+		18133A8719920419008630E5 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A7319920419008630E5 /* UIButton+AFNetworking.m */; };
+		18133A8819920419008630E5 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A7519920419008630E5 /* UIImageView+AFNetworking.m */; };
+		18133A8919920419008630E5 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A7819920419008630E5 /* UIProgressView+AFNetworking.m */; };
+		18133A8A19920419008630E5 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 18133A7A19920419008630E5 /* UIWebView+AFNetworking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,11 +59,60 @@
 		18133A1919920343008630E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18133A1A19920343008630E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18133A1C19920343008630E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18133A1F19920343008630E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18133A2119920343008630E5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		18133A2719920343008630E5 /* weaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weaterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18133A2C19920343008630E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18133A2D19920343008630E5 /* weaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weaterTests.swift; sourceTree = "<group>"; };
+		18133A3719920408008630E5 /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		18133A3819920408008630E5 /* FirstCityCelllTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCityCelllTableViewCell.swift; sourceTree = "<group>"; };
+		18133A3919920408008630E5 /* FirstCityCelllTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstCityCelllTableViewCell.xib; sourceTree = "<group>"; };
+		18133A3A19920408008630E5 /* FirstCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCityViewController.swift; sourceTree = "<group>"; };
+		18133A3B19920408008630E5 /* FirstCityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstCityViewController.xib; sourceTree = "<group>"; };
+		18133A3C19920408008630E5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		18133A3D19920408008630E5 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		18133A3E19920408008630E5 /* occ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = occ.h; sourceTree = "<group>"; };
+		18133A3F19920408008630E5 /* SaveWeaterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveWeaterCell.swift; sourceTree = "<group>"; };
+		18133A4019920408008630E5 /* SaveWeaterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveWeaterCell.xib; sourceTree = "<group>"; };
+		18133A4119920408008630E5 /* SecandCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecandCityViewController.swift; sourceTree = "<group>"; };
+		18133A4219920408008630E5 /* SecandCityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecandCityViewController.xib; sourceTree = "<group>"; };
+		18133A4319920408008630E5 /* WeaterCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaterCellTableViewCell.swift; sourceTree = "<group>"; };
+		18133A4419920408008630E5 /* WeaterCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeaterCellTableViewCell.xib; sourceTree = "<group>"; };
+		18133A4519920408008630E5 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		18133A4619920408008630E5 /* WeatherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
+		18133A5819920419008630E5 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		18133A5919920419008630E5 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		18133A5A19920419008630E5 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		18133A5B19920419008630E5 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		18133A5C19920419008630E5 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		18133A5D19920419008630E5 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		18133A5E19920419008630E5 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		18133A5F19920419008630E5 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		18133A6019920419008630E5 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		18133A6119920419008630E5 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		18133A6219920419008630E5 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		18133A6319920419008630E5 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		18133A6419920419008630E5 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		18133A6519920419008630E5 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		18133A6619920419008630E5 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		18133A6719920419008630E5 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		18133A6819920419008630E5 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		18133A6919920419008630E5 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		18133A6A19920419008630E5 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		18133A6C19920419008630E5 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		18133A6D19920419008630E5 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		18133A6E19920419008630E5 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		18133A6F19920419008630E5 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		18133A7019920419008630E5 /* UIAlertView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+AFNetworking.h"; sourceTree = "<group>"; };
+		18133A7119920419008630E5 /* UIAlertView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
+		18133A7219920419008630E5 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		18133A7319920419008630E5 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		18133A7419920419008630E5 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		18133A7519920419008630E5 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		18133A7619920419008630E5 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		18133A7719920419008630E5 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		18133A7819920419008630E5 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		18133A7919920419008630E5 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		18133A7A19920419008630E5 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +136,7 @@
 		18133A0C19920343008630E5 = {
 			isa = PBXGroup;
 			children = (
+				18133A5619920419008630E5 /* AF */,
 				18133A1719920343008630E5 /* weater */,
 				18133A2A19920343008630E5 /* weaterTests */,
 				18133A1619920343008630E5 /* Products */,
@@ -75,9 +155,24 @@
 		18133A1719920343008630E5 /* weater */ = {
 			isa = PBXGroup;
 			children = (
+				18133A3719920408008630E5 /* ColorHelper.swift */,
+				18133A3819920408008630E5 /* FirstCityCelllTableViewCell.swift */,
+				18133A3919920408008630E5 /* FirstCityCelllTableViewCell.xib */,
+				18133A3A19920408008630E5 /* FirstCityViewController.swift */,
+				18133A3B19920408008630E5 /* FirstCityViewController.xib */,
+				18133A3C19920408008630E5 /* HomeViewController.swift */,
+				18133A3D19920408008630E5 /* HomeViewController.xib */,
+				18133A3E19920408008630E5 /* occ.h */,
+				18133A3F19920408008630E5 /* SaveWeaterCell.swift */,
+				18133A4019920408008630E5 /* SaveWeaterCell.xib */,
+				18133A4119920408008630E5 /* SecandCityViewController.swift */,
+				18133A4219920408008630E5 /* SecandCityViewController.xib */,
+				18133A4319920408008630E5 /* WeaterCellTableViewCell.swift */,
+				18133A4419920408008630E5 /* WeaterCellTableViewCell.xib */,
+				18133A4519920408008630E5 /* WeatherViewController.swift */,
+				18133A4619920408008630E5 /* WeatherViewController.xib */,
 				18133A1A19920343008630E5 /* AppDelegate.swift */,
 				18133A1C19920343008630E5 /* ViewController.swift */,
-				18133A1E19920343008630E5 /* Main.storyboard */,
 				18133A2119920343008630E5 /* Images.xcassets */,
 				18133A1819920343008630E5 /* Supporting Files */,
 			);
@@ -107,6 +202,63 @@
 				18133A2C19920343008630E5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18133A5619920419008630E5 /* AF */ = {
+			isa = PBXGroup;
+			children = (
+				18133A5719920419008630E5 /* AFNetworking */,
+				18133A6B19920419008630E5 /* UIKit+AFNetworking */,
+			);
+			path = AF;
+			sourceTree = "<group>";
+		};
+		18133A5719920419008630E5 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				18133A5819920419008630E5 /* AFHTTPRequestOperation.h */,
+				18133A5919920419008630E5 /* AFHTTPRequestOperation.m */,
+				18133A5A19920419008630E5 /* AFHTTPRequestOperationManager.h */,
+				18133A5B19920419008630E5 /* AFHTTPRequestOperationManager.m */,
+				18133A5C19920419008630E5 /* AFHTTPSessionManager.h */,
+				18133A5D19920419008630E5 /* AFHTTPSessionManager.m */,
+				18133A5E19920419008630E5 /* AFNetworking.h */,
+				18133A5F19920419008630E5 /* AFNetworkReachabilityManager.h */,
+				18133A6019920419008630E5 /* AFNetworkReachabilityManager.m */,
+				18133A6119920419008630E5 /* AFSecurityPolicy.h */,
+				18133A6219920419008630E5 /* AFSecurityPolicy.m */,
+				18133A6319920419008630E5 /* AFURLConnectionOperation.h */,
+				18133A6419920419008630E5 /* AFURLConnectionOperation.m */,
+				18133A6519920419008630E5 /* AFURLRequestSerialization.h */,
+				18133A6619920419008630E5 /* AFURLRequestSerialization.m */,
+				18133A6719920419008630E5 /* AFURLResponseSerialization.h */,
+				18133A6819920419008630E5 /* AFURLResponseSerialization.m */,
+				18133A6919920419008630E5 /* AFURLSessionManager.h */,
+				18133A6A19920419008630E5 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		18133A6B19920419008630E5 /* UIKit+AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				18133A6C19920419008630E5 /* AFNetworkActivityIndicatorManager.h */,
+				18133A6D19920419008630E5 /* AFNetworkActivityIndicatorManager.m */,
+				18133A6E19920419008630E5 /* UIActivityIndicatorView+AFNetworking.h */,
+				18133A6F19920419008630E5 /* UIActivityIndicatorView+AFNetworking.m */,
+				18133A7019920419008630E5 /* UIAlertView+AFNetworking.h */,
+				18133A7119920419008630E5 /* UIAlertView+AFNetworking.m */,
+				18133A7219920419008630E5 /* UIButton+AFNetworking.h */,
+				18133A7319920419008630E5 /* UIButton+AFNetworking.m */,
+				18133A7419920419008630E5 /* UIImageView+AFNetworking.h */,
+				18133A7519920419008630E5 /* UIImageView+AFNetworking.m */,
+				18133A7619920419008630E5 /* UIKit+AFNetworking.h */,
+				18133A7719920419008630E5 /* UIProgressView+AFNetworking.h */,
+				18133A7819920419008630E5 /* UIProgressView+AFNetworking.m */,
+				18133A7919920419008630E5 /* UIWebView+AFNetworking.h */,
+				18133A7A19920419008630E5 /* UIWebView+AFNetworking.m */,
+			);
+			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,8 +341,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18133A2019920343008630E5 /* Main.storyboard in Resources */,
+				18133A5319920408008630E5 /* WeaterCellTableViewCell.xib in Resources */,
+				18133A5519920408008630E5 /* WeatherViewController.xib in Resources */,
+				18133A4919920408008630E5 /* FirstCityCelllTableViewCell.xib in Resources */,
+				18133A4F19920408008630E5 /* SaveWeaterCell.xib in Resources */,
 				18133A2219920343008630E5 /* Images.xcassets in Resources */,
+				18133A4B19920408008630E5 /* FirstCityViewController.xib in Resources */,
+				18133A4D19920408008630E5 /* HomeViewController.xib in Resources */,
+				18133A5119920408008630E5 /* SecandCityViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +366,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18133A8019920419008630E5 /* AFURLConnectionOperation.m in Sources */,
+				18133A4A19920408008630E5 /* FirstCityViewController.swift in Sources */,
+				18133A7F19920419008630E5 /* AFSecurityPolicy.m in Sources */,
+				18133A5419920408008630E5 /* WeatherViewController.swift in Sources */,
+				18133A8919920419008630E5 /* UIProgressView+AFNetworking.m in Sources */,
+				18133A8619920419008630E5 /* UIAlertView+AFNetworking.m in Sources */,
+				18133A8419920419008630E5 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				18133A7C19920419008630E5 /* AFHTTPRequestOperationManager.m in Sources */,
+				18133A8A19920419008630E5 /* UIWebView+AFNetworking.m in Sources */,
+				18133A8719920419008630E5 /* UIButton+AFNetworking.m in Sources */,
+				18133A8519920419008630E5 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				18133A4819920408008630E5 /* FirstCityCelllTableViewCell.swift in Sources */,
 				18133A1D19920343008630E5 /* ViewController.swift in Sources */,
+				18133A4E19920408008630E5 /* SaveWeaterCell.swift in Sources */,
+				18133A4719920408008630E5 /* ColorHelper.swift in Sources */,
 				18133A1B19920343008630E5 /* AppDelegate.swift in Sources */,
+				18133A8319920419008630E5 /* AFURLSessionManager.m in Sources */,
+				18133A8219920419008630E5 /* AFURLResponseSerialization.m in Sources */,
+				18133A4C19920408008630E5 /* HomeViewController.swift in Sources */,
+				18133A5019920408008630E5 /* SecandCityViewController.swift in Sources */,
+				18133A8119920419008630E5 /* AFURLRequestSerialization.m in Sources */,
+				18133A8819920419008630E5 /* UIImageView+AFNetworking.m in Sources */,
+				18133A7E19920419008630E5 /* AFNetworkReachabilityManager.m in Sources */,
+				18133A5219920408008630E5 /* WeaterCellTableViewCell.swift in Sources */,
+				18133A7B19920419008630E5 /* AFHTTPRequestOperation.m in Sources */,
+				18133A7D19920419008630E5 /* AFHTTPSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,17 +412,6 @@
 			targetProxy = 18133A2819920343008630E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		18133A1E19920343008630E5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18133A1F19920343008630E5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		18133A2F19920343008630E5 /* Debug */ = {
@@ -328,6 +499,7 @@
 				INFOPLIST_FILE = weater/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = weater/occ.h;
 			};
 			name = Debug;
 		};
@@ -339,6 +511,7 @@
 				INFOPLIST_FILE = weater/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = weater/occ.h;
 			};
 			name = Release;
 		};
