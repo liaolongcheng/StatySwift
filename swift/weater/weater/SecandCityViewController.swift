@@ -20,6 +20,10 @@ class SecandCityViewController: UIViewController,UITableViewDataSource,UITableVi
         _firstCityId = firstId
     }
 
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,19 +50,19 @@ class SecandCityViewController: UIViewController,UITableViewDataSource,UITableVi
     
     func loadSource()
     {
-        var filePath:String = NSBundle.mainBundle().pathForResource("SecondCityList", ofType: "plist")
-        _sourceDic = NSDictionary(contentsOfFile: filePath)[_firstCityId] as? NSDictionary
+        var filePath:String = NSBundle.mainBundle().pathForResource("SecondCityList", ofType: "plist")!
+        _sourceDic = NSDictionary(contentsOfFile: filePath)[_firstCityId!] as? NSDictionary
     }
     
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int
     {
         return 1
     }
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return _sourceDic.allKeys.count
     }
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let str = "Cell"
         var cell:UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(str) as? UITableViewCell
@@ -66,17 +70,17 @@ class SecandCityViewController: UIViewController,UITableViewDataSource,UITableVi
         {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: str)
         }
-        cell!.textLabel.text = _sourceDic.allValues[indexPath.row] as String
-        cell!.textLabel.textColor = ColorHelper.getSomeColor()
+        cell!.textLabel!.text = _sourceDic.allValues[indexPath.row] as? String
+        cell!.textLabel!.textColor = ColorHelper.getSomeColor()
 
-        return cell
+        return cell!
         
     }
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
         var cityId:NSDictionary = [_sourceDic.allKeys[indexPath.row] as NSString:_sourceDic.allValues[indexPath.row] as NSString]
         var weaterViewController = WeatherViewController(cityInfo:cityId)
-        self.navigationController.pushViewController(weaterViewController, animated: true)
+        self.navigationController?.pushViewController(weaterViewController, animated: true)
     }
     
 }

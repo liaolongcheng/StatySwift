@@ -20,9 +20,13 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     
     
     
-    init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!)
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!)
     {
         super.init(nibName: nibName, bundle: nibBundleOrNil)
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     
@@ -91,14 +95,15 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         timeLable = UILabel(frame: CGRectMake(0, 0, 100, 30))
         timeLable!.center = CGPointMake(320/2, 44/2)
         timeLable!.textAlignment = NSTextAlignment.Center
-        self.navigationController.navigationBar.addSubview(timeLable!);
+        self.navigationController?.navigationBar.addSubview(timeLable!);
         refreshTtile()
         
         
-        self.menuBackView.layer.masksToBounds = true
-        self.menuBackView.layer.cornerRadius = 10.0
-        self.weaterTableView.delegate = self
-        self.weaterTableView.dataSource = self
+        self.menuBackView?.layer.masksToBounds = true
+        self.menuBackView?.layer.cornerRadius = 10.0
+        self.weaterTableView?.delegate = self
+        self.weaterTableView?.dataSource = self
+        //NSLog("%@",self.menuBackView?)
         
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:"refreshTtile", userInfo: nil, repeats:true)
         
@@ -122,7 +127,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     @IBAction func addWeaterButtonClick(sender: AnyObject) {
     
         var firstCityViewContaroller = FirstCityViewController(nibName: "firstCityViewContaroller", bundle: nil)
-        self.navigationController.pushViewController(firstCityViewContaroller, animated: true)
+        self.navigationController?.pushViewController(firstCityViewContaroller, animated: true)
     }
     
     
@@ -131,29 +136,30 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         return 1
     }
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return _sourceArray.count
     }
-    
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
-    {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let str = "Cell"
         var cell:UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(str) as? UITableViewCell
         if (cell == nil)
         {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: str)
             cell!.backgroundColor = UIColor.whiteColor()
-            cell!.textLabel.textAlignment = NSTextAlignment.Center
+            cell!.textLabel?.textAlignment = NSTextAlignment.Center
         }
-        cell!.textLabel.text = _sourceArray[indexPath.row].allValues?[0] as NSString
-        cell!.textLabel.textColor = ColorHelper.getSomeColor()
-        return cell
+        cell!.textLabel?.text = _sourceArray[indexPath.row].allValues?[0] as NSString
+        cell!.textLabel?.textColor = ColorHelper.getSomeColor()
+        return cell!
+
     }
+    
+   
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
         var weater = WeatherViewController(cityId: _sourceArray[indexPath.row].allKeys?[0] as NSString)
-        self.navigationController.pushViewController(weater, animated: true)
+        self.navigationController!.pushViewController(weater, animated: true)
     }
 
     @IBAction func helpeButtonClick(sender: AnyObject) {

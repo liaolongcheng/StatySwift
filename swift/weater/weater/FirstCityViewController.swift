@@ -15,9 +15,13 @@ class FirstCityViewController: UIViewController,UITableViewDataSource,UITableVie
     @IBOutlet var firstCityTableView: UITableView!
     
     
-    init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!)
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!)
     {
         super.init(nibName: nibName, bundle: nibBundleOrNil)
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -31,26 +35,27 @@ class FirstCityViewController: UIViewController,UITableViewDataSource,UITableVie
     func loadSource()
     {
         var filePath = NSBundle.mainBundle().pathForResource("FirstCityList", ofType: "plist")
-        _sourceDic = NSDictionary(contentsOfFile: filePath)
+        _sourceDic = NSDictionary(contentsOfFile: filePath!)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int
     {
         return 2
     }
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    //func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         if section == 0
         {
-            return _sourceDic["Other"].count
+            return _sourceDic["Other"]!.count
         }
         else if section == 1
         {
-            return _sourceDic["Our"].count
+            return _sourceDic["Our"]!.count
         }
         return 0
     }
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let str = "Cell"
         var cell:FirstCityCelllTableViewCell? = tableView.dequeueReusableCellWithIdentifier(str) as? FirstCityCelllTableViewCell
@@ -61,8 +66,8 @@ class FirstCityViewController: UIViewController,UITableViewDataSource,UITableVie
         }
         if indexPath.section == 0
         {
-            var keyStr:NSString = _sourceDic["Other"].allKeys?[indexPath.row] as NSString
-            var valueStr:NSString = _sourceDic["Other"].allValues?[indexPath.row] as NSString
+            var keyStr:NSString = _sourceDic["Other"]?.allKeys[indexPath.row] as NSString
+            var valueStr:NSString = _sourceDic["Other"]?.allValues[indexPath.row] as NSString
             
             cell!.firstLable.text = valueStr
             cell!.firstLable.textColor = ColorHelper.getSomeColor()
@@ -73,7 +78,7 @@ class FirstCityViewController: UIViewController,UITableViewDataSource,UITableVie
         }
         else if indexPath.section == 1
         {
-            var keyStr:NSString = _sourceDic["Our"].allValues?[indexPath.row] as NSString
+            var keyStr:NSString = _sourceDic["Our"]?.allValues[indexPath.row] as NSString
             var rang:NSRange = keyStr.rangeOfString("&")
             var firstTitle = keyStr.substringToIndex(rang.location)
             var secandTitle = keyStr.substringFromIndex(rang.location + 1)
@@ -83,7 +88,7 @@ class FirstCityViewController: UIViewController,UITableViewDataSource,UITableVie
             cell!.secandLable.text = secandTitle
             cell!.secandLable.textColor = ColorHelper.getSomeColor()
         }
-        return cell
+        return cell!
     }
     func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String!
     {
@@ -102,15 +107,15 @@ class FirstCityViewController: UIViewController,UITableViewDataSource,UITableVie
         var firstId:NSString?
         if indexPath.section == 0
         {
-            firstId = _sourceDic["Other"].allKeys?[indexPath.row] as? NSString
+            firstId = _sourceDic["Other"]?.allKeys?[indexPath.row] as? NSString
         }
         else if indexPath.section == 1
         {
-            firstId = _sourceDic["Our"].allKeys?[indexPath.row] as? NSString
+            firstId = _sourceDic["Our"]?.allKeys[indexPath.row] as? NSString
         }
         
         var secandCityViewController = SecandCityViewController(firstId: firstId!)
-        self.navigationController.pushViewController(secandCityViewController, animated: true)
+        self.navigationController?.pushViewController(secandCityViewController, animated: true)
     }
     
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat

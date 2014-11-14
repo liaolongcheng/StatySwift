@@ -12,11 +12,7 @@ import QuartzCore
 class HelpView: UIView {
 
     @IBOutlet weak var scrollView: UIScrollView!
-  
-    init(coder aDecoder: NSCoder!)
-    {
-        super.init(coder: aDecoder)
-    }
+
     
     override func willMoveToSuperview(newSuperview: UIView!)
     {

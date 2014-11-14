@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class WeatherViewController : UIViewController,UITableViewDataSource,UITableViewDelegate {
     var _cityId:NSString?
     var _weaterDic:NSDictionary?
 
@@ -25,6 +25,10 @@ class WeatherViewController: UIViewController,UITableViewDataSource,UITableViewD
         var home:HomeViewController = HomeViewController.shearedHomeViewController()
         home._sourceArray.addObject(cityInfo)
         home.weaterTableView.reloadData()
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,16 +59,15 @@ class WeatherViewController: UIViewController,UITableViewDataSource,UITableViewD
     {
         return 2
     }
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
-    {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0
         {
             return 6
         }
         return 8
     }
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
-    {
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let str1 = "Cell"
         let str2 = "Cell1"
         if indexPath.section == 0
@@ -78,7 +81,7 @@ class WeatherViewController: UIViewController,UITableViewDataSource,UITableViewD
             }
             var formatter:NSDateFormatter = NSDateFormatter()
             formatter.dateFormat = "yyyy年MM月dd日"
-            var time:String = formatter.stringFromDate(NSDate(timeInterval:Double(indexPath.row*24*60*60), sinceDate:formatter.dateFromString(String(_weaterDic!.objectForKey("date_y") as NSString))))
+            var time:String = formatter.stringFromDate(NSDate(timeInterval:Double(indexPath.row*24*60*60), sinceDate:formatter.dateFromString(String(_weaterDic!.objectForKey("date_y") as NSString))!))
             cell!.timeLable.text = time
             cell!.timeLable.textColor = ColorHelper.getSomeColor()
             cell!.wenduLable.text = _weaterDic!["temp\(indexPath.row + 1)"] as? String
@@ -89,8 +92,8 @@ class WeatherViewController: UIViewController,UITableViewDataSource,UITableViewD
             cell!.tianqiLable.textColor = ColorHelper.getSomeColor()
             cell!.firstImageView.image = UIImage(named: NSString(format:"d%@.png",_weaterDic!["img\(indexPath.row * 2 + 1)"] as String))
             cell!.secandImageView.image = UIImage(named: NSString(format:"n%@.png",_weaterDic!["img\(indexPath.row * 2 + 2)"] as String))
-
-            return cell
+            
+            return cell!
         }
         else if indexPath.section == 1
         {
@@ -102,9 +105,9 @@ class WeatherViewController: UIViewController,UITableViewDataSource,UITableViewD
             cell!.photoImageView.image = UIImage(named: "d25.png")
             cell!.titleLable.text = "adfadfa"
             cell!.titleLable.textColor = ColorHelper.getSomeColor()
-            return cell
+            return cell!
         }
-        return nil
+        return UITableViewCell()
     }
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat
     {

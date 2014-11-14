@@ -21,7 +21,7 @@ enum fangxiang1
 {
     case shang,xia,zuo,you
 }
-//使用枚举
+//使用枚举sdf
 var d = fangxiang.left
 d = .you
 
