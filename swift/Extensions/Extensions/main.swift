@@ -39,6 +39,7 @@ extension Person{
     }
     
 }
+//asdfasdf
 
 var per = Person()
 println("我的平均成绩是:\(per.scoreAvg)")
