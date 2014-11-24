@@ -11,7 +11,7 @@ import Foundation
 //数组的用法
 
 let emptyArray1: Array = []     //声明一个空的数组
-var emptyArray2 = Int[]()       //声明一个空的数组, 限定了值的类型为Int
+var emptyArray2 = [Int]()       //声明一个空的数组, 限定了值的类型为Int
 
 var shoppingList = ["芒果", "橘子", "水", "葡萄", "香蕉"];   //声明一个5个字符串类型元素的数组
 println(shoppingList.capacity)
@@ -67,7 +67,7 @@ for (index, value) in enumerate(shoppingList) {
 
 
 //Demo2
-var threeDoubles = Double[](count: 3, repeatedValue: 0.0)   //[0.0, 0.0, 0.0]
+var threeDoubles = [Double](count: 3, repeatedValue: 0.0)   //[0.0, 0.0, 0.0]
 println(threeDoubles)
 
 var anotherThreeDoubles = Array(count: 3, repeatedValue: 2.5)   //[2.5, 2.5, 2.5]

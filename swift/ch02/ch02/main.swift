@@ -276,8 +276,8 @@ println(name[0])
 // 输出 "Mohsen"
 */
 
-var array:Array=[]
-var array1=String[]()
+var array:Array=Array()
+var array1=[String]()
 var array3=["1","2","3","4"]
 
 
@@ -515,7 +515,7 @@ class Student : Person
     var text:NSString
     
     /*@lazy 修饰的属性表示延时加载属性，该属性在类初始化的时候不被附值,只有在该属性被使用时候才会被副职*/
-    @lazy var address = "成都 青羊区"
+    lazy var address = "成都 青羊区"
     
     
     

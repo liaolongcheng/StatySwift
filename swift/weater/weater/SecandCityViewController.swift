@@ -51,7 +51,7 @@ class SecandCityViewController: UIViewController,UITableViewDataSource,UITableVi
     func loadSource()
     {
         var filePath:String = NSBundle.mainBundle().pathForResource("SecondCityList", ofType: "plist")!
-        _sourceDic = NSDictionary(contentsOfFile: filePath)[_firstCityId!] as? NSDictionary
+        _sourceDic = NSDictionary(objectsAndKeys: filePath)[_firstCityId!] as? NSDictionary
     }
     
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int
@@ -70,8 +70,8 @@ class SecandCityViewController: UIViewController,UITableViewDataSource,UITableVi
         {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: str)
         }
-        cell!.textLabel!.text = _sourceDic.allValues[indexPath.row] as? String
-        cell!.textLabel!.textColor = ColorHelper.getSomeColor()
+        cell!.textLabel.text = _sourceDic.allValues[indexPath.row] as? String
+        cell!.textLabel.textColor = ColorHelper.getSomeColor()
 
         return cell!
         

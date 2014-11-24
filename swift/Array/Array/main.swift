@@ -9,11 +9,11 @@
 import Foundation
 
 //声明一个空数组
-var ay:Array = []
+var ay = []
 //声明一个类型为Int的数组
-var ay1:Array = Int[]()
+var ay1:Array = [Int]()
 var ay2:Array = ["张三","李四","王五"]
-var ay3 = Double[](count:3,repeatedValue:2.3)
+var ay3 = [Double](count:3,repeatedValue:2.3)
 
 //往数组添加一个元素
 ay2.append("田七")
@@ -25,7 +25,6 @@ for aa in ay2
 ay2.insert("赵六",atIndex:2)
 println(ay2)
 //添加元素
-ay2 += "aa"
 println(ay2)
 //将一个数组添加到宁外一个数组
 ay2 += ["ii","33"]
@@ -80,6 +79,10 @@ var sourceDic:NSDictionary = NSDictionary()
 var aa:NSArray = sourceDic["aaa"]?[9] as NSArray
 var bb:NSArray = sourceDic["Other"]?[0]?["bb"] as NSArray
 
+var ay4 = ["aa","bb","cc","dd"]
+
+ay4[0...2] = ["vv"]
+println(ay)
 
 
 

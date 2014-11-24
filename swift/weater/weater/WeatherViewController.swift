@@ -11,7 +11,8 @@ import UIKit
 class WeatherViewController : UIViewController,UITableViewDataSource,UITableViewDelegate {
     var _cityId:NSString?
     var _weaterDic:NSDictionary?
-
+    
+  
     @IBOutlet var weaterTableView: UITableView!
     init(cityId:NSString)
     {
@@ -25,6 +26,7 @@ class WeatherViewController : UIViewController,UITableViewDataSource,UITableView
         var home:HomeViewController = HomeViewController.shearedHomeViewController()
         home._sourceArray.addObject(cityInfo)
         home.weaterTableView.reloadData()
+        
     }
 
     required init(coder aDecoder: NSCoder) {

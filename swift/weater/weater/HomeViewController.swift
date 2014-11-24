@@ -127,6 +127,7 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
     @IBAction func addWeaterButtonClick(sender: AnyObject) {
     
         var firstCityViewContaroller = FirstCityViewController(nibName: "firstCityViewContaroller", bundle: nil)
+        var first = firstCityViewContaroller()
         self.navigationController?.pushViewController(firstCityViewContaroller, animated: true)
     }
     
@@ -147,10 +148,10 @@ class HomeViewController: UIViewController ,UITableViewDataSource,UITableViewDel
         {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: str)
             cell!.backgroundColor = UIColor.whiteColor()
-            cell!.textLabel?.textAlignment = NSTextAlignment.Center
+            cell!.textLabel.textAlignment = NSTextAlignment.Center
         }
-        cell!.textLabel?.text = _sourceArray[indexPath.row].allValues?[0] as NSString
-        cell!.textLabel?.textColor = ColorHelper.getSomeColor()
+        cell!.textLabel.text = _sourceArray[indexPath.row].allValues?[0] as NSString
+        cell!.textLabel.textColor = ColorHelper.getSomeColor()
         return cell!
 
     }

@@ -14,7 +14,7 @@
 		<string>https://github.com/liaolongcheng/StatySwift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>swift/weater/weater.xcodeproj/project.xcworkspace</string>
+	<string>swift/weater/weater.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A7F583D2FD61473F3B15B5C330A8DA681E3CE8A9</key>

@@ -75,7 +75,7 @@ func defaultFunc(name:String,address aAdddress:String = "中国",phone aPhone:St
 {
     println("名字为:\(name)的人家庭住址在:\(aAdddress)电话是:\(aPhone)")
 }
-defaultFunc("码子",address:"12344")
+defaultFunc("码子",phone:"12344")
 defaultFunc("张三",address:"成都",phone:"fasd")
 
 /***有可变参数的函数 我们可以在参数类型后面加上...标示该参数为一个可变参数我们可以在使用该参数时传入一个或多个值，在函数内部我们可以将此参数当成是一个数组来处理遍历到参数里面的每一个值但是需要注意的是一个函数只能有一个可变参数，并且只能在函数的最后一个参数出现*/
@@ -140,7 +140,7 @@ func qianTaoFunction(c:Int,#d:Int)
     }
     neibuFunction()
 }
-qianTaoFunction()
+qianTaoFunction(9, d: 9)
 /**将函数作为返回值返回*/
 /**这里定义了一个有一个参数参数为Int 返回值为一个参数为Int返回值为Int的函数*/
 func backFunc(num:Int) -> (Int)->Int

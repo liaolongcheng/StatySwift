@@ -9,7 +9,7 @@
 import Foundation
 
 //声明一个字典
-var myDic:Dictionary = [:]
+var myDic = [:]
 var myDic1:Dictionary = ["name":"张三","phone":"12345678"]
 var myDic2:Dictionary = Dictionary<String,Int>()
 println(myDic1)

@@ -55,7 +55,7 @@ default:
 }
 
 //匹配元组.(x, y)坐标
-let somePoint = (0, 0)
+let somePoint = (2, 0)
 switch somePoint {
 case (0, 0):
     println("(0, 0) is at the origin")
@@ -70,7 +70,7 @@ default:
 }
 
 //值绑定
-let anotherPoint = (2, 0)
+let anotherPoint = (2, 3)
 switch anotherPoint {
 case (let x, 0):    //此时x只是一个占位符, 用来临时的获取switch条件中的一个或多个值
     println("x value is \(x)")
@@ -115,15 +115,15 @@ First: for s in score { //定义标签First
     }
 }
 
-class Preson:NSObject
-{
-    var _block:()?
-    
-    init()
-    {
-        _block!
-    }
-}
+//class Preson:NSObject
+//{
+//    var _block:()?
+//    
+//    init()
+//    {
+//        _block!
+//    }
+//}
 
 
 

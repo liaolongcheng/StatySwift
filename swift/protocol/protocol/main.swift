@@ -8,12 +8,6 @@
 
 import Foundation
 
-
-
-
-
-
-
 /**
 协议其实相当于在java中的接口可以在里面定义需要实现的方法
 
@@ -66,14 +60,14 @@ swift中的协议使用 protocol关键字来定义 协议可以继承其他协�
 //老板类
 class Boss : NSObject
 {
-    var delegate:Claim?
-    //var person:protocol<Claim>?
+    //var delegate:Claim?
+    var person:protocol<Claim>?
     
     //老板面试员工
     func audition(person:protocol<Claim>)
     {
         //实现代理
-        self.delegate = person
+        self.person = person
 //        self.delegate?.money = 5000.0
     }
     
@@ -81,11 +75,11 @@ class Boss : NSObject
     func startWork()
     {
         //deletate 后面加?是因为delegate有可能是nil
-        self.delegate?.codeObjectc()
-        self.delegate?.codeSwift()
-        self.delegate?.codePHP()
+        self.person?.codeObjectc()
+        self.person?.codeSwift()
+        self.person?.codePHP()
         //codeJava后面加问号是因为codeJava这个方法是可选的有可能是没有被实现的所以需要加?判断是否有实现这个方法有就执行没有就不执行
-        self.delegate?.codeJava?()
+        self.person?.codeJava?()
         
     }
     
@@ -139,7 +133,8 @@ worker.money = 200.0
 //创建老板对象
 var boss:Boss = Boss()
 
-boss.audition(worker)
+//boss.audition(worker)
+boss.person = worker
 boss.startWork()
 
 

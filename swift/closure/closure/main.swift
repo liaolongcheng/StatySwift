@@ -22,12 +22,14 @@ func closure(par1:NSString,par2:NSString)->String
     println("name is \(par1) phone is \(par2)")
     return "aa"
 }
-someFunctionThatTakesAClosure({(par1,par2)->String in
+someFunctionThatTakesAClosure(closure)
+someFunctionThatTakesAClosure({(par1:NSString,par2:NSString)->String in
     
     println("name is \(par1) phone is \(par2)")
     return "aa"
     
-    });
+});
+
 
 //reversed = sort(names, { (s1: String, s2: String) -> Bool in
 //    return s1 > s2
@@ -56,7 +58,7 @@ someFunctionThatTakesAClosure({(par1,par2)->String in
 /***使用闭包计算一个数组所有元素的和*/
 
 
-func getNumSum(ay:Int[],fun:(Int[])->Int)
+func getNumSum(ay:[Int],fun:([Int])->Int)
 {
     var sum = fun(ay)
     println("数组元素的和是:" + String(sum))
@@ -64,7 +66,7 @@ func getNumSum(ay:Int[],fun:(Int[])->Int)
 
 var ay = [12,34,67,45,89]
 
-getNumSum(ay,{(ay:Int[])->Int in
+getNumSum(ay,{(ay:Array<Int>)->Int in
     
     var sum = 0
     for item in ay
@@ -87,7 +89,7 @@ getNumSum(ay,{
 
 //尾随闭包
 getNumSum(ay){
-    (ay:Int[])->Int in
+    (ay:[Int])->Int in
     
     var sum = 0
     for item in ay

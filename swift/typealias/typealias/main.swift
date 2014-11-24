@@ -12,3 +12,6 @@ import Foundation
 typealias ID = Array<String> //这样就定义了我们自己的一个ID类型
 var myClassName:ID = ["张三三","李四","王五"] //使用自己定义的ID类型来声明一个变量
 println(myClassName)
+
+typealias callBack = (par1:String,par2:String)->String
+typealias ZWProgressHUDCompletionBlock = (par1:String,par2:String)->String
